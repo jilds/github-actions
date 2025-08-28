@@ -20,18 +20,6 @@ management:
       base-path: /
       exposure:
         include: health, info, prometheus
-  endpoint:
-    health:
-      validate-group-membership: true
-      group: liveness, readiness
-    info:
-      access: read_only
-      cache:
-        time-to-live: 5m
-    prometheus:
-      access: read_only
-    loggers:
-      access: read_only
   prometheus:
     metrics:
       export:
