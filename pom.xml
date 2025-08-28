@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>dev.silvajon</groupId>
 	<artifactId>githubactions</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>githubactions</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
