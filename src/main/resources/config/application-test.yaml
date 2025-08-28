@@ -1,0 +1,8 @@
+logging:
+  config: classpath:log/logback-spring-default.xml
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true

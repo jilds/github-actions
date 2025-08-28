@@ -1,0 +1,11 @@
+logging:
+  config: classpath:log/logback-spring-default.xml
+server:
+  shutdown: immediate
+  port: 8080
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: false

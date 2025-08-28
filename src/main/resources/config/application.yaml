@@ -1,0 +1,41 @@
+server:
+  shutdown: graceful
+  port: 8080
+  tomcat:
+    connection-timeout: 5m
+logging:
+  config: classpath:log/logback-spring-${SYSTEM_ENV}.xml
+spring:
+  application.name: aifoundry
+  profiles:
+    group:
+      default:
+      test:
+      prod:
+management:
+  endpoints:
+    access:
+      default: none
+    web:
+      base-path: /
+      exposure:
+        include: health, info, prometheus
+  endpoint:
+    health:
+      validate-group-membership: true
+      group: liveness, readiness
+    info:
+      access: read_only
+      cache:
+        time-to-live: 5m
+    prometheus:
+      access: read_only
+    loggers:
+      access: read_only
+  prometheus:
+    metrics:
+      export:
+        step: 2m
+  info:
+    java:
+      enabled: true
